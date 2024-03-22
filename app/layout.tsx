@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
+import Sidenav from "./Sidenav";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +21,68 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+        
+      <body className={inter.className + "shadow-md w-full fixed top-0 left-0"}>
+        
+        <div className=" flex justify-start items-center space-x-10 bg-blue-500 py-4 md:px-10 px-7 ">
+        <Sidenav/>
+        
+        <a href="/#">
+        
+          <Image src={`/logo2.png`}  alt=""  height={10} width={50}  />
+        </a>
+        
+          <Link
+            href="/#"
+            className="text-xl  
+              font-bold  
+              hover:underline   
+              hover:text-red-500  
+              inline-block  
+              hover:duration-300  
+              cursor-pointer">Home
+          </Link>
+          <Link
+            href="/about"
+            className="text-xl  
+              font-bold  
+              hover:underline   
+              hover:text-red-500  
+              inline-block  
+              hover:duration-300  
+              cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            href="/service"
+            className="text-xl  
+              font-bold  
+              hover:underline   
+              hover:text-red-500  
+              inline-block  
+              hover:duration-300  
+              cursor-pointer"
+          >
+            Service
+          </Link>
+          <Link
+            href="/teams"
+            className="text-xl  
+              font-bold  
+              hover:underline   
+              hover:text-red-500  
+              inline-block  
+              hover:duration-300  
+              cursor-pointer"
+          >
+            Teams
+          </Link>
+        </div>
+        
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

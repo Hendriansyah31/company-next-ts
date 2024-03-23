@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
 
         
-      <body className={inter.className + "shadow-md w-full fixed top-0 left-0"}>
+      <body className={inter.className + "shadow-md w-screen h-screen"}>
         
         <div className=" flex justify-start items-center space-x-10 bg-blue-500 py-4 md:px-10 px-7 ">
         <Sidenav/>

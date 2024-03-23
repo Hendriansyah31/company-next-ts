@@ -3,7 +3,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <>
-      <section className="bg-[url('/wq.png')] h-52 w-screen">
+      <section className="bg-[url('/ds.png')] h-52 w-screen">
         <h3 className="font-bold pt-14 text-2xl pr-5 pl-14 underline underline-offset-8 text-blue-500 ">ABOUT US</h3>
         <p className="pt-3 pl-14">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus mollitia, perferendis error quod sapiente eos porro debitis aliquid velit magnam, quam officia aperiam laborum natus minus placeat deserunt? Corrupti, repellat!</p>
         
